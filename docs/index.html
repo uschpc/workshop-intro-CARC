@@ -112,79 +112,78 @@ background-image: url('images/cluster_pic.jpg')
 !-->
 
 ---
-## Discovery Compute Nodes (as of 2022/01/05)
+## Discovery Compute Nodes (as of 2022/01/18)
 
 <div style="overflow-y:scroll; height:500px">
     <table>
         <!--
         To generate table rows, run the command:
-        sinfo -o "<tr><td>%P</td><td>%N</td><td>%D</td><td>%c</td><td>%m</td><td>%G</td><td>%f</td></tr>"
+        sinfo -o "<tr><td>%P</td><td>%D</td><td>%c</td><td>%m</td><td>%G</td><td>%f</td></tr>"
 
         Then you modify the memory and prettify the GPU names.
         I also added some line breaks to make it a bit easier to read.
         -->
         <tr>
-            <th>PARTITION</th><th>NODELIST</th><th>NODES</th><th>CPUS</th><th>MEMORY (GB)</th><th>GPUs</th><th>CPU Model</th>
+            <th>PARTITION</th><th>NODES</th><th>CPUS</th><th>MEMORY (GB)</th><th>GPUs</th><th>CPU Model</th>
         </tr>
         <tr>
-            <td>debug</td><td>e05-[42,76,78,80]</td><td>4</td><td>16</td><td>64</td><td> </td><td>xeon-2650v2</td>
+            <td>debug</td><td>1</td><td>20</td><td>128</td><td>P100</td><td>xeon-2640v4</td>
         </tr>
         <tr>
-            <td>debug</td><td>e09-18</td><td>1</td><td>16</td><td>64</td><td>K40</td><td>xeon-2640v3</td>
+            <td>debug</td><td>4</td><td>16</td><td>64</td><td></td><td>xeon-2650v2</td>
         </tr>
         <tr>
-            <td>debug</td><td>e23-02</td><td>1</td><td>20</td><td>128</td><td>P100</td><td>xeon-2640v4</td>
+            <td>debug</td><td>1</td><td>16</td><td>64</td><td>K40</td><td>xeon-2640v3</td>
         </tr>
         <tr>
-            <td>epyc-64</td><td>a01-[02-05,07-09,11-14,16-19],a02-[02-05,07-09,11-14,16-19],a03-[02-05,07-09,11-14,16-19],a04-[02-05,07-09,16-19],b01-[02-04,07-08]</td><td>61</td><td>64</td><td>256</td><td> </td><td>epyc-7513</td>
+            <td>epyc-64</td><td>32</td><td>64</td><td>256</td><td></td><td>epyc-7542</td>
         </tr>
         <tr>
-            <td>epyc-64</td><td>b22-[01-32]</td><td>32</td><td>64</td><td>256</td><td> </td><td>epyc-7542</td>
+            <td>epyc-64</td><td>61</td><td>64</td><td>256</td><td></td><td>epyc-7513</td>
         </tr>
         <tr>
-            <td>main*</td><td>e16-05</td><td>1</td><td>20</td><td>64</td><td>K40</td><td>xeon-2640v4</td>
+            <td>main</td><td>1</td><td>20</td><td>64</td><td>K40</td><td>xeon-2640v4</td>
         </tr>
         <tr>
-            <td>main*</td><td>d17-[03-40],d18-[01-38]</td><td>76</td><td>20</td><td>64</td><td> </td><td>xeon-2640v4</td>
+            <td>main</td><td>80</td><td>24</td><td>94</td><td></td><td>xeon-4116</td>
         </tr>
         <tr>
-            <td>main*</td><td>e06-[01-04,06-22],e11-[26-27,29,45,47],e13-[11,26,28-48],e14-[41-48],e15-[01-24]</td><td>81</td><td>16</td><td>64</td><td> </td><td>xeon-2640v3</td>
+            <td>main</td><td>76</td><td>20</td><td>64</td><td></td><td>xeon-2640v4</td>
         </tr>
         <tr>
-            <td>main*</td><td>e07-[01-16,18]</td><td>17</td><td>16</td><td>64</td><td>K40</td><td>xeon-2640v3</td>
+            <td>main</td><td>81</td><td>16</td><td>64</td><td></td><td>xeon-2640v3</td>
         </tr>
         <tr>
-            <td>main*</td><td>e16-[01-04,06-24],e17-[01-04,06-07,09-19]</td><td>40</td><td>20</td><td>64</td><td>K40</td><td>xeon-2640v4</td>
+            <td>main</td><td>17</td><td>16</td><td>64</td><td>K40</td><td>xeon-2640v3</td>
         </tr>
         <tr>
-            <td>main*</td><td>d05-[06-15,26-42],d06-[15-28],d11-[09-47]</td><td>80</td><td>24</td><td>94</td><td> </td><td>xeon-4116</td>
+            <td>main</td><td>40</td><td>20</td><td>64</td><td>K40</td><td>xeon-2640v4</td>
         </tr>
         <tr>
-            <td>gpu</td><td>a01-[01,06,15,20],b01-[01,06,15,20],b02-[01,06,15,20]</td><td>12</td><td>64</td><td>256</td><td>A100</td><td>epyc-7513</td>
+            <td>gpu</td><td>12</td><td>64</td><td>256</td><td>A100</td><td>epyc-7513</td>
         </tr>
         <tr>
-            <td>gpu</td><td>a02-[01,06,15,20],a03-[01,06,15,20],a04-[01,06,15,20]</td><td>12</td><td>32</td><td>256</td><td>A40</td><td>epyc-7282</td>
+            <td>gpu</td><td>12</td><td>32</td><td>256</td><td>A40</td><td>epyc-7282</td>
         </tr>
         <tr>
-            <td>gpu</td><td>d23-[10,13-16],e21-[01-16],e22-[01-16],e23-01</td><td>38</td><td>20</td><td>128</td><td>P100</td><td>xeon-2640v4</td>
+            <td>gpu</td><td>29</td><td>32</td><td>191</td><td>V100</td><td>xeon-6130</td>
         </tr>
         <tr>
-            <td>gpu</td><td>d11-[02-04],d13-[02-11],d14-[03-18]</td><td>29</td><td>32</td><td>191</td><td>V100</td><td>xeon-6130</td>
+            <td>gpu</td><td>38</td><td>20</td><td>128</td><td>P100</td><td>xeon-2640v4</td>
         </tr>
         <tr>
-            <td>oneweek</td><td>e01-[46,48,52,60,62,64,76],e02-[40-46,48-80]</td><td>47</td><td>16</td><td>128</td><td> </td><td>xeon-2650v2</td>
+            <td>oneweek</td><td>2</td><td>16</td><td>64</td><td></td><td>xeon-2640v3</td>
         </tr>
         <tr>
-            <td>oneweek</td><td>e06-24,e10-12</td><td>2</td><td>16</td><td>64</td><td> </td><td>xeon-2640v3</td>
+            <td>oneweek</td><td>47</td><td>16</td><td>128</td><td></td><td>xeon-2650v2</td>
         </tr>
         <tr>
-            <td>largemem</td><td>a01-10,a02-10,a03-10,a04-10</td><td>4</td><td>64</td><td>1024</td><td> </td><td>epyc-7513</td>
+            <td>largemem</td><td>4</td><td>64</td><td>1024</td><td></td><td>epyc-7513</td>
         </tr>
-
-    </table>
+        </table>
 </div>
 ---
-## Connecting to Discovery/Endeavour
+## Connecting to Discovery/Endeavour on Terminal
 
 - A secure shell (ssh) is required
     - On Mac, use **Terminal**
@@ -196,7 +195,7 @@ background-image: url('images/cluster_pic.jpg')
 - DUO Two Factor Authentication
     - [See USC/ITS page on setup](https://itservices.usc.edu/duo/)
 ---
-## Connecting to Discovery/Endeavour
+## Connecting to Discovery/Endeavour on Terminal
 
 - From terminal window
     - `ssh <username>@discovery.usc.edu`
@@ -205,7 +204,7 @@ background-image: url('images/cluster_pic.jpg')
 - username is your USC NetID
 ---
 
-## Connecting to Discovery/Endeavour
+## Connecting to Discovery/Endeavour on Terminal
 ```bash
 ttroj$ ssh ttroj@discovery.usc.edu
 
@@ -223,7 +222,7 @@ Success. Logging you in...
 
  There may be no visual feedback when entering your password
 ---
-## Connecting to Discovery/Endeavour
+## Connecting to Discovery/Endeavour on Terminal
 ```bash
 Last login: Wed Aug 25 09:10:59 2021 from 76.94.200.232
 ------------------------------------------------------------------------------
@@ -244,7 +243,7 @@ violators to the full extent of the law.
 ```
 After logging in you'll see a "message of the day"
 ---
-## Connecting to Discovery/Endeavour
+## Connecting to Discovery/Endeavour on Terminal
 
 ```bash
 [ttroj@hpc-login3 ~]$ pwd
@@ -309,7 +308,7 @@ You can then run some example commands to verify login was successful
     <ul>
         <li> Quickly access scratch directories </li>
     </ul>
-    <li> /scratch to be decommissioned soon </li>
+    <li> /scratch to be decommissioned and replaced soon </li>
     <li> Eventually /scratch2 will be too </li>
 </ul>
 </div>
@@ -336,6 +335,11 @@ You can then run some example commands to verify login was successful
     - Examples
         - `wget ftp://ftp.ncbi.nlm.nih.gov/1GB`
         - `git clone https://github.com/kohler/gifsicle.git`
+---
+## Connecting from Open OnDemand
+
+* Users who want to avoid the terminal can use Open OnDemand to do many of the same tasks.
+* To log in go to https://carc-ondemand.usc.edu.
 ---
 ## Software repository
 
@@ -533,6 +537,70 @@ For more details see https://slurm.schedmd.com/sbatch.html
 |`largemem`|Access to nodes with 1TB memory| 1 week| 120|5000|
 |`oneweek`|Long running jobs| 1 week| 208|5000|
 |`debug`|Testing| 30 minutes| 48|5000|
+
+---
+
+## Submitting jobs from Open OnDemand
+<div class="left-column" style="width:50%; paddting-top:1em">
+<ul>
+    <li> Technically possible to submit jobs from Open OnDemand</li>
+    <li> Most people use it for RStudio and JupyterHub</li>
+    <li> Using the "job composer" you can set job directory and script</li>
+    <li> Output files accessible from Open OnDemand</li>
+    <li> Saved in ~/ondemand </li>
+</ul>
+</div>
+<div class="right-column" style="width:50%; padding-top:0em">
+    <img src="images/job_composer.png" alt="proj dir example">
+</div>
+
+---
+## JupyterLab on Open OnDemand
+
+<div class="left-column" style="width:35%; paddting-top:1em">
+<ul>
+    <li> To launch a Jupyter Notebook fill out resource requests</li>
+    <li> See full documentation at <a href="https://www.carc.usc.edu/user-information/user-guides/hpc-basics/getting-started-ondemand"> Getting Started with CARC On Demand </li>
+</ul>
+</div>
+<div class="right-column" style="width:35%; padding-top:0em">
+    <img src="images/jupyterlab_request.png" alt="proj dir example">
+</div>
+---
+## JupyterLab on Open OnDemand
+
+<ul>
+    <li> All files saved in home directory by default</li>
+    <li> To access files in `/project` or `/scratch` make "symlink"</li>
+    <ul>
+        <li> `ln -s /project/ttroj_412/ my_proj` </li>
+    </ul>
+    <li> To load modules, click "Softwares" tab</li>
+    <li> To use an Anaconda environment see <a href="https://www.carc.usc.edu/user-information/user-guides/software-and-programming/jupyter-kernels"> Installing Jupyter Kernels</a> </li>
+</ul>
+</div>
+---
+## RStudio on Open OnDemand
+<div class="left-column" style="width:35%; paddting-top:1em">
+<ul>
+    <li> To launch RStudio fill out resource requests</li>
+    <li> See full documentation at <a href="https://www.carc.usc.edu/user-information/user-guides/hpc-basics/getting-started-ondemand"> Getting Started with CARC On Demand </li>
+</ul>
+</div>
+<div class="right-column" style="width:50%; padding-top:0em">
+    <img src="images/rstudio_request.png" alt="proj dir example">
+</div>
+---
+## RStudio on Open OnDemand
+<div class="left-column" style="width:35%; paddting-top:1em">
+<ul>
+    <li> Login credentials will be displayed once your session begins</li>
+</ul>
+</div>
+<div class="right-column" style="width:50%; padding-top:0em">
+    <img src="images/ood_rstudio_launched.png" alt="proj dir example">
+</div>
+
 
 ---
 ## Important Things to Note
